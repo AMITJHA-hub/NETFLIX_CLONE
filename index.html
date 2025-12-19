@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https: data:; font-src 'self' https://cdnjs.cloudflare.com; media-src 'self' https://assets.nflxext.com;">
     <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -12,6 +18,11 @@
 </head>
 
 <body>
+    <!-- 
+    Security Recommendations for Future:
+    1. Host external videos and images locally instead of loading from Netflix CDN (https://assets.nflxext.com)
+    2. Enable HTTPS enforcement in GitHub Pages settings (Repository Settings > Pages > Enforce HTTPS)
+    -->
     <div class="main">
         <NAV>
             <img width="60" src="images/logo.svg" alt="">
@@ -154,7 +165,6 @@
                 </div>
             </div>
         </footer>
-        </main>
     </div>
 </body>
 
